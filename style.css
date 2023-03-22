@@ -15,7 +15,6 @@ body {
 /**************************
     MAIN
 **************************/
-
 main {
     display: flex;
     flex-direction: column;
@@ -25,7 +24,7 @@ main {
     margin-inline: auto;
 }
 
-/* MINI-MAIN */
+/***** MINI MAIN *****/
 #mini-main {
     height: calc(100vh - 90px);
     display: flex;
@@ -36,7 +35,7 @@ ul {
     list-style: none;
 }
 
-/* nav verticale */
+/***** nav verticale *****/
 #nav-vertical {
     flex: 0 0 230px;
     background-color: black;
@@ -45,12 +44,14 @@ ul {
     justify-content: space-between;
 }
 
+/* logo */
 #nav-logo {
     width: 135px;
     height: 45px;
     margin: 21px 21px 30px 21px;
 }
 
+/* main section */
 #main-section {
     font-size: 12px;
 }
@@ -65,7 +66,7 @@ ul {
     border-left: 2px solid greenyellow;
 }
 
-#main-section li:nth-last-of-type(2), li:nth-last-of-type(1) {
+#main-section li:nth-last-of-type(2), #main-section li:nth-last-of-type(1) {
     color: #808080;
 }
 
@@ -83,7 +84,86 @@ ul {
     padding-left: 0.2em;
 }
 
-/* contenuto */
+/* playlist */
+#playlist {
+    margin-left: 22px;
+}
+
+#playlist h3 {
+    font-size: 14px;
+    margin-top: 30px;
+    margin-bottom: 1em;
+}
+
+#new-playlist {
+    display: flex;
+    font-size: 15px;
+    align-items: center;
+    margin-bottom: 20px;
+    color: grey;
+}
+
+#new-playlist div {
+    background-color: gray;
+    color: black;
+    font-size: 12px;
+    width: 2em;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5em;
+}
+
+#new-playlist span {
+    font-size: 15px;
+}
+
+#playlist li {
+    font-size: 12px;
+    margin-bottom: 1.2em;
+    color: grey;
+}
+
+/* app & profile */
+#nav-bottom {
+    margin-bottom: 1em;
+}
+
+#nav-download, #nav-profile {
+    display: flex;
+    align-items: center;
+    margin-left: 22px;
+}
+
+#nav-download span {
+    font-size: 12px;
+    color: grey;
+}
+
+#nav-download img {
+    height: 1em;
+    margin-right: 10px;
+    filter: invert(58%) sepia(0%) saturate(3426%) hue-rotate(314deg) brightness(86%) contrast(94%);
+}
+
+#nav-profile img {
+    height: 1.5em;
+    aspect-ratio: 1 / 1;
+    background-color: grey;
+    border-radius: 100px;
+    margin-right: 10px;
+}
+
+#nav-vertical hr {
+    width: calc(100% - (22px * 2));
+    margin-inline: auto;
+    margin-top: 8px;
+    margin-bottom: 13px;
+}
+
+
+/***** contenuto *****************************************************/
 #content {
     flex-basis: calc(85% + 250px);
     background-color: #141922;
@@ -93,9 +173,75 @@ ul {
 /* FOOTER */
 #footer {
     background-color: #282828;
+    color: white;
     height: 90px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+}
+
+/* brano */
+#brano {
+    display: flex;
+    height: fit-content;
+}
+
+#brano img {
+    height: 3em;
+    margin-inline: 0.7em;
+}
+
+#brano-nome {
+    line-height: 1.2em;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 2.5em;
+}
+
+#brano-nome p {
+    font-size: 12px;
+    color: grey;
+}
+
+#brano-icon {
+    display: flex;
+    align-items: center;
+}
+
+#brano-icon i {
+    margin-right: 1em;
+}
+
+/* minutaggio ****************************************/
+
+
+/* volume */
+#volume {
+    display: flex;
+    align-items: center;
+    margin-right: 0.7em;
+}
+
+#volume i {
+    margin-right: 1em;
+}
+
+#volume-bar-all {
+    width: 100px;
+    height: 4px;
+    border-radius: 20px;
+    background-color: grey;
+}
+
+#volume-bar {
+    width: 40px;
+    height: 100%;
+    border-radius: 20px;
+    background-color: white;
 }
