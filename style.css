@@ -15,6 +15,7 @@ body {
 /**************************
     MAIN
 **************************/
+
 main {
     display: flex;
     flex-direction: column;
