@@ -1,0 +1,100 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #222222;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+/**************************
+    MAIN
+**************************/
+main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100vh;
+    width: 90%;
+    margin-inline: auto;
+}
+
+/* MINI-MAIN */
+#mini-main {
+    height: calc(100vh - 90px);
+    display: flex;
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+/* nav verticale */
+#nav-vertical {
+    flex: 0 0 230px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#nav-logo {
+    width: 135px;
+    height: 45px;
+    margin: 21px 21px 30px 21px;
+}
+
+#main-section {
+    font-size: 12px;
+}
+
+#main-section li {
+    padding-left: 22px;
+    margin-bottom: 1em;
+    border-left: 2px solid black;
+}
+
+#main-section li:first-child {
+    border-left: 2px solid greenyellow;
+}
+
+#main-section li:nth-last-of-type(2), li:nth-last-of-type(1) {
+    color: #808080;
+}
+
+#main-section img {
+    height: 24px;
+    vertical-align: middle;
+}
+
+#main-section li:nth-last-of-type(2) img, li:nth-last-of-type(1) img {
+    filter: invert(58%) sepia(0%) saturate(3426%) hue-rotate(314deg) brightness(86%) contrast(94%);
+}
+
+#main-section span {
+    vertical-align: middle;
+    padding-left: 0.2em;
+}
+
+/* contenuto */
+#content {
+    flex-basis: calc(85% + 250px);
+    background-color: #141922;
+    overflow: auto;
+}
+
+/* FOOTER */
+#footer {
+    background-color: #282828;
+    height: 90px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
