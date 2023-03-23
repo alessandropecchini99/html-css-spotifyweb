@@ -48,7 +48,7 @@ ul {
 #nav-logo {
     width: 135px;
     height: 45px;
-    margin: 21px 21px 30px 21px;
+    margin: 10px 21px 30px 21px;
 }
 
 /* main section */
@@ -168,6 +168,29 @@ ul {
     flex-basis: calc(85% + 250px);
     background-color: #141922;
     overflow: auto;
+    position: relative;
+}
+
+#upgrade {
+    height: 7vh;
+    background-color: rgba(0, 0, 0, 0.4);
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+         display: flex;
+         justify-content: flex-end;
+         align-items: center;
+}
+
+#upgrade button {
+    margin-right: 1.5em;
+    padding: 0.7em 2.5em;
+    font-size: 0.7em;
+    background-color: black;
+    color: white;
+    border: 3px solid white;
+    border-radius: 20px;
 }
 
 
