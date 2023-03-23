@@ -12,19 +12,17 @@ body {
     font-family: 'Nunito Sans', sans-serif;
 }
 
-/**************************
-    MAIN
-**************************/
+/**********************************
+************    MAIN   ************ 
+**********************************/
 main {
     display: flex;
     flex-direction: column;
     position: relative;
     height: 100vh;
-    width: 90%;
-    margin-inline: auto;
 }
 
-/***** MINI MAIN *****/
+/***************** MINI MAIN *****************/
 #mini-main {
     height: calc(100vh - 90px);
     display: flex;
@@ -35,7 +33,7 @@ ul {
     list-style: none;
 }
 
-/***** nav verticale *****/
+/********* nav verticale *********/
 #nav-vertical {
     flex: 0 0 230px;
     background-color: black;
@@ -163,21 +161,22 @@ ul {
 }
 
 
-/***** contenuto *****************************************************/
+/********* contenuto *************************/
 #content {
     flex-basis: calc(85% + 250px);
+    width: 100%;
     background-color: #141922;
     overflow: auto;
     position: relative;
 }
 
 #upgrade {
-    height: 7vh;
+    height: 9vh;
     background-color: rgba(0, 0, 0, 0.4);
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
-        left: 0;
+        left: 230px;
         z-index: 50;
          display: flex;
          justify-content: flex-end;
@@ -186,39 +185,93 @@ ul {
 
 #upgrade button {
     margin-right: 1.5em;
-    padding: 0.7em 2.5em;
-    font-size: 0.7em;
+    padding: 0.6em 2.5em;
+    font-size: 0.9em;
     background-color: black;
     color: white;
     border: 3px solid white;
-    border-radius: 20px;
+    border-radius: 100px;
 }
 
 #contenuto {
     width: 100%;
-    margin-top: 9vh;
+    margin-top: 11vh;
 }
 
-#content-section ul {
+#content-section {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 1.5em;
-    font-size: 0.9em;
+    font-size: 1.1em;
+    color: grey;
+    margin-inline: 2em;
 }
 
-#content-section ul hr {
+#content-section hr {
     color: greenyellow;
     width: 45%;
     margin-inline: auto;
+    margin-top: 1px;
+}
+
+#contenuto h2 {
+    font-size: 2.3em;
+    margin-left: 20px;
+    margin-top: 0.6em;
+    margin-bottom: 0.1em;
+}
+
+#contenuto h2:nth-of-type(1) {
+    margin-bottom: 0.5em;
+}
+
+#contenuto p {
+    margin-left: 20px;
+    margin-bottom: 2em;
+    color: grey;
+}
+
+#contenuto .cards {
+    width: 100%;
+    padding-inline: 20px 2.5em;
+    margin-bottom: 5em;
+    display: flex;
+    gap: 1em;
+}
+
+#contenuto .card {
+    flex: 0 0 calc((100% - 5 * 1em) / 6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#contenuto .card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+#contenuto .card h3 {
+    font-size: 1.5rem;
+    margin-top: 0.7em;
+    margin-bottom: 0.2em;
+}
+
+#contenuto .card p {
+    font-size: 1em;
+    color: grey;
+    margin: 0em;
 }
 
 
-/* FOOTER */
+/********* FOOTER *********/
 #footer {
     background-color: #282828;
     color: white;
     height: 90px;
-        position: absolute;
+        position: fixed;
         bottom: 0;
         left: 0;
         right: 0;
@@ -236,7 +289,7 @@ ul {
 
 #brano img {
     height: 3em;
-    margin-inline: 0.7em;
+    margin-inline: 1em 0.7em;
 }
 
 #brano-nome {
@@ -315,7 +368,7 @@ ul {
 #volume {
     display: flex;
     align-items: center;
-    margin-right: 0.7em;
+    margin-right: 1em;
 }
 
 #volume i {
