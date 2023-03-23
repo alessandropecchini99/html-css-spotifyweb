@@ -170,6 +170,9 @@ ul {
     overflow: auto;
 }
 
+
+
+
 /* FOOTER */
 #footer {
     background-color: #282828;
@@ -216,10 +219,56 @@ ul {
 
 #brano-icon i {
     margin-right: 1em;
+    color: grey;
 }
 
-/* minutaggio ****************************************/
+/* minutaggio */
+#minutaggio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+}
 
+#min-icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+
+#min-icon i {
+    margin-inline: 0.5em;
+    font-size: 1.2em;
+}
+
+#min-icon .fa-circle-play {
+    font-size: 2em;
+}
+
+#minuti {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#minuti span {
+    font-size: 0.7em;
+}
+
+#min-bar {
+    width: 100%;
+    height: 4px;
+    border-radius: 100px;
+    background-color: grey;
+    margin-inline: 1.1em;
+}
+
+#min-bar div {
+    width: 30%;
+    height: 100%;
+    border-radius: 100px;
+    background-color: white;
+}
 
 /* volume */
 #volume {
@@ -235,13 +284,13 @@ ul {
 #volume-bar-all {
     width: 100px;
     height: 4px;
-    border-radius: 20px;
+    border-radius: 100px;
     background-color: grey;
 }
 
 #volume-bar {
     width: 40px;
     height: 100%;
-    border-radius: 20px;
+    border-radius: 100px;
     background-color: white;
 }
