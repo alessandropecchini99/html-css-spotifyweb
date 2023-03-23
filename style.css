@@ -13,7 +13,7 @@ body {
 }
 
 /**********************************
-************    MAIN   ************ 
+    MAIN 
 **********************************/
 main {
     display: flex;
@@ -35,7 +35,7 @@ ul {
 
 /********* nav verticale *********/
 #nav-vertical {
-    flex: 0 0 230px;
+    flex: 0 0 200px;
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -47,6 +47,10 @@ ul {
     width: 135px;
     height: 45px;
     margin: 10px 21px 30px 21px;
+}
+
+#nav-mini-logo {
+    display: none;
 }
 
 /* main section */
@@ -124,10 +128,6 @@ ul {
 }
 
 /* app & profile */
-#nav-bottom {
-    margin-bottom: 1em;
-}
-
 #nav-download, #nav-profile {
     display: flex;
     align-items: center;
@@ -163,7 +163,7 @@ ul {
 
 /********* contenuto *************************/
 #content {
-    flex-basis: calc(85% + 250px);
+    flex-basis: calc(85% + 200px);
     width: 100%;
     background-color: #141922;
     overflow: auto;
@@ -176,7 +176,7 @@ ul {
         position: fixed;
         top: 0;
         right: 0;
-        left: 230px;
+        left: 200px;
         z-index: 50;
          display: flex;
          justify-content: flex-end;
@@ -327,12 +327,14 @@ ul {
 #min-icon {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    min-width: 7em;
+    width: 10em;
     margin-bottom: 0.5em;
 }
 
 #min-icon i {
-    margin-inline: 0.5em;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 #min-icon .fa-circle-play {

@@ -1,0 +1,113 @@
+/*************** TABLE / MEDIA M ***************/
+@media screen and (max-width: 1100px) {
+    #upgrade {
+        height: 7vh;
+    }
+
+    #upgrade button {
+        font-size: 0.8em;
+        padding: 0.5em 2.2em;
+    }
+
+    #contenuto {
+        margin-top: 9vh;
+    }
+
+    #contenuto .cards {
+        flex-wrap: wrap;
+    }
+
+    #contenuto .card {
+        flex: 0 0 calc((100% - 3em) / 4);
+    }
+
+    #contenuto .card h3 {
+        font-size: 1rem;
+    }
+}
+
+
+/*************** TABLE / MEDIA S ***************/
+@media screen and (max-width: 700px) {
+    #contenuto .card {
+        flex: 0 0 calc((100% - 1em) / 2);
+    }
+
+    #brano-nome {
+        margin-right: 0.8em;
+    }
+
+    #brano-icon {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 4.5vh;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    #volume i {
+        margin-right: 0.9em;
+    }
+}
+
+/*************** TABLE / MEDIA XS ***************/
+@media screen and (max-width: 600px) {
+    #nav-vertical {
+        flex: 0 0 45px;
+    }
+
+    #nav-logo {
+        display: none;
+    }
+
+    #nav-mini-logo {
+        display: block;
+        height: 30px;
+        margin-top: 5px;
+        margin-inline: auto;
+        margin-bottom: 20px;
+    }
+
+    #main-section li {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    #main-section li:first-child {
+        border: 0px;
+    }
+
+    #main-section span {
+        display: none;
+    }
+
+    #playlist {
+        display: none;
+    }
+
+    #nav-download, #nav-profile {
+        margin: 0;
+    }
+
+    #nav-download span, #nav-profile h3 {
+        display: none;
+    }
+
+    #nav-download img {
+        margin-inline: auto;
+        margin-bottom: 1em;
+    }
+
+    #nav-profile img {
+        margin-inline: auto;
+        margin-bottom: 0.5em;
+    }
+
+    #nav-vertical hr {
+        display: none;
+    }
+
+    #upgrade {
+        left: 45px
+    }
+}
