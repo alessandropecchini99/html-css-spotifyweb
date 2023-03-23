@@ -68,25 +68,32 @@ ul {
     border-left: 2px solid greenyellow;
 }
 
-#main-section li:nth-last-of-type(2), #main-section li:nth-last-of-type(1) {
-    color: #808080;
-}
-
 #main-section img {
     height: 24px;
     vertical-align: middle;
 }
 
-#main-section li:nth-last-of-type(2) img, li:nth-last-of-type(1) img {
-    filter: invert(58%) sepia(0%) saturate(3426%) hue-rotate(314deg) brightness(86%) contrast(94%);
+#main-section li:nth-of-type(1) img, li:nth-of-type(1) span {
+    opacity: 0.8;
+    cursor: pointer;
 }
 
-#main li:nth-last-of-type(3) img {
-    filter: invert(92%) sepia(12%) saturate(0%) hue-rotate(177deg) brightness(91%) contrast(90%);
+#main-section li:nth-of-type(2) img, li:nth-of-type(3) img  {
+    opacity: 0.5;
+    cursor: pointer;
 }
 
-#main-section li:nth-last-of-type(2) img:hover, li:nth-last-of-type(1) img:hover, li:nth-last-of-type(3) img:hover {
-    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(188deg) brightness(103%) contrast(101%);
+#main-section li:nth-of-type(2) span, #main-section li:nth-of-type(3) span {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+#main-section li img:hover {
+    opacity: 1;
+}
+
+#main-section li span:hover {
+    opacity: 1;
 }
 
 #main-section span {
@@ -114,11 +121,16 @@ ul {
     font-size: 15px;
     align-items: center;
     margin-bottom: 20px;
-    color: grey;
+    opacity: 0.5;
+}
+
+#new-playlist:hover {
+    opacity: 1;
+    cursor: pointer;
 }
 
 #new-playlist div {
-    background-color: gray;
+    background-color: white;
     color: black;
     font-size: 12px;
     width: 2em;
@@ -136,7 +148,11 @@ ul {
 #playlist li {
     font-size: 12px;
     margin-bottom: 1.2em;
-    color: grey;
+    opacity: 0.5;
+}
+
+#playlist li:hover {
+    opacity: 1;
 }
 
 /* app & profile */
@@ -146,15 +162,25 @@ ul {
     margin-left: 22px;
 }
 
+#nav-download {
+    opacity: 0.5;
+}
+
 #nav-download span {
     font-size: 12px;
-    color: grey;
+}
+
+#nav-download:hover {
+    opacity: 1;
 }
 
 #nav-download img {
     height: 1em;
     margin-right: 10px;
-    filter: invert(58%) sepia(0%) saturate(3426%) hue-rotate(314deg) brightness(86%) contrast(94%);
+}
+
+#nav-profile {
+    margin-bottom: 0.5em;
 }
 
 #nav-profile img {
@@ -205,6 +231,10 @@ ul {
     border-radius: 100px;
 }
 
+#upgrade button:hover {
+    transform: scale(1.05);
+}
+
 #contenuto {
     width: 100%;
     margin-top: 11vh;
@@ -216,8 +246,15 @@ ul {
     flex-wrap: wrap;
     gap: 1.5em;
     font-size: 1.1em;
-    color: grey;
     margin-inline: 2em;
+}
+
+#content-section span {
+    opacity: 0.5;
+}
+
+#content-section span:hover {
+    opacity: 1;
 }
 
 #content-section hr {
@@ -258,11 +295,33 @@ ul {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    
+}
+
+#contenuto .card div {
+    position: relative;
 }
 
 #contenuto .card img {
     width: 100%;
     aspect-ratio: 1 / 1;
+}
+
+#contenuto .card div:hover > img {
+    filter: brightness(0.3);
+}
+
+#contenuto .card i {
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+#contenuto .card div:hover >  i {
+    opacity: 1;
 }
 
 #contenuto .card h3 {
@@ -275,6 +334,10 @@ ul {
     font-size: 1em;
     color: grey;
     margin: 0em;
+}
+
+#contenuto .artist img {
+    border-radius: 100%;
 }
 
 
@@ -315,7 +378,20 @@ ul {
 
 #brano-nome p {
     font-size: 12px;
-    color: grey;
+    opacity: 0.5;
+}
+
+#brano-nome p:hover {
+    opacity: 1;
+}
+
+#brano-nome p a {
+    color: white;
+    text-decoration: none;
+}
+
+#brano-nome p a:hover {
+    text-decoration: underline;
 }
 
 #brano-icon {
@@ -325,7 +401,11 @@ ul {
 
 #brano-icon i {
     margin-right: 1em;
-    color: grey;
+    opacity: 0.5;
+}
+
+#brano-icon i:hover {
+    opacity: 1;
 }
 
 /* minutaggio */
@@ -353,6 +433,10 @@ ul {
     font-size: 2em;
 }
 
+#min-icon .fa-circle-play:hover {
+    transform: scale(1.1);
+}
+
 #minuti {
     display: flex;
     align-items: center;
@@ -376,6 +460,23 @@ ul {
     height: 100%;
     border-radius: 100px;
     background-color: white;
+    position: relative;
+}
+
+#min-bar:hover div {
+    background-color: greenyellow;
+}
+
+#min-bar div i {
+    font-size: 0.7em;
+    position: absolute;
+    left: 98%;
+    top: -4px;
+    display: none;
+}
+
+#min-bar:hover > div i {
+    display: block;
 }
 
 /* volume */
@@ -401,4 +502,21 @@ ul {
     height: 100%;
     border-radius: 100px;
     background-color: white;
+    position: relative;
+}
+
+#volume-bar-all:hover > #volume-bar {
+    background-color: greenyellow;
+}
+
+#volume-bar .fa-solid {
+    font-size: 0.7em;
+    position: absolute;
+    left: 35px;
+    top: -4px;
+    display: none;
+}
+
+#volume-bar-all:hover > #volume-bar .fa-solid {
+    display: block;
 }
