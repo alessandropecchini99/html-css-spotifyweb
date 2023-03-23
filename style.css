@@ -178,6 +178,7 @@ ul {
         top: 0;
         right: 0;
         left: 0;
+        z-index: 50;
          display: flex;
          justify-content: flex-end;
          align-items: center;
@@ -193,7 +194,23 @@ ul {
     border-radius: 20px;
 }
 
+#contenuto {
+    width: 100%;
+    margin-top: 9vh;
+}
 
+#content-section ul {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    font-size: 0.9em;
+}
+
+#content-section ul hr {
+    color: greenyellow;
+    width: 45%;
+    margin-inline: auto;
+}
 
 
 /* FOOTER */
@@ -205,6 +222,7 @@ ul {
         bottom: 0;
         left: 0;
         right: 0;
+        z-index: 100;
          display: flex;
          justify-content: space-between;
          align-items: center;
